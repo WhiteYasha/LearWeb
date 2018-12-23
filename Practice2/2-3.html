@@ -46,6 +46,7 @@
 			color: red;
 		}
 	</style>
+	<script src="src/jquery-3.3.1.min.js"></script>
 </head>
 <body>
 	<div class="header">
@@ -64,9 +65,9 @@
 				<th>SUN</th>
 			</tr>
 			<tr>
-				<td class="disable">29</td>
-				<td class="disable">30</td>
-				<td class="disable">31</td>
+				<td>29</td>
+				<td>30</td>
+				<td>31</td>
 				<td>1</td>
 				<td>2</td>
 				<td>3</td>
@@ -88,7 +89,7 @@
 				<td>15</td>
 				<td>16</td>
 				<td>17</td>
-				<td class="active">18</td>
+				<td>18</td>
 			</tr>
 			<tr>
 				<td>19</td>
@@ -106,9 +107,39 @@
 				<td>29</td>
 				<td>30</td>
 				<td>31</td>
-				<td class="disable">1</td>
+				<td>1</td>
 			</tr>
 		</table>
 	</div>
+
+	<script>
+		let months = ["january","february","march","april","may","june",
+						"july","august","september","october","november","december"];
+		let weekday = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+		let sumday = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+		$(document).ready(function() {
+			var now = new Date(2018,10,11),
+				first = new Date(now.getFullYear(), now.getMonth(), 1);
+
+			$('.day').html(now.getDate());
+			$('.month').html(months[now.getMonth()]);
+			$('th').each(function() {
+				$(this).html(weekday[(first.getDay() + $(this).index()) % 7]);
+			});
+			var days = $('td').toArray();
+			for (i = 0; i < days.length; i++) {
+				tempDay = i + 1;
+				if (tempDay > sumday[now.getMonth()]) {
+					days[i].innerHTML = tempDay % sumday[now.getMonth()];
+					days[i].className = "disable";
+				}
+				else {
+					days[i].innerHTML = tempDay;
+					if (tempDay == now.getDate()) days[i].className = "active";
+				}
+			}
+		});
+	</script>
 </body>
 </html>
