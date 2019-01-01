@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		.even {
+			background: #F2BBBB;
+		}
+		.odd {
+			background: #A1D9FF;
+		}
+	</style>
+	<script src="src/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+	</ul>
+
+	<script>
+		$(document).ready(function() {
+			$('li:odd').attr('class', 'odd');
+			$('li:even').attr('class', 'even');
+		});
+	</script>
+</body>
+</html>
