@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+	<script>window.jQuery || document.write('<script src="src/jquery-3.3.1.min.js" type="text/javascript"><\/script>')</script>
+	<style>
+		.menubar {
+			background: lightgray;
+			padding: 0 0 0 20px;
+			border-radius: 3px;
+			width: 300px;
+		}
+		.menu, .dropdown {
+			color: white;
+			background: gray;
+			width: 80px;
+		}
+		.menu {
+			display: inline-block;
+			padding: 0 5px 0 5px;
+		}
+		.dropdown {
+			position: absolute;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="menubar">
+		<div class="menu">一级菜单1
+			<div class="dropdown">
+				<div>二级菜单11</div>
+				<div>二级菜单12</div>
+				<div>二级菜单13</div>
+			</div>
+		</div>
+		<div class="menu">一级菜单2
+			<div class="dropdown">
+				<div>二级菜单21</div>
+				<div>二级菜单22</div>
+				<div>二级菜单23</div>
+			</div>
+		</div>
+		<div class="menu">一级菜单3
+			<div class="dropdown">
+				<div>二级菜单31</div>
+				<div>二级菜单32</div>
+				<div>二级菜单33</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$('.menu').each((index, element) => {
+			$(element).mouseover((e) => {
+				$(element).children('.dropdown').slideDown();
+				e.stopPropagation();
+			});
+			$(element).mouseout((e) => {
+				$(element).children('.dropdown').slideUp();
+				e.stopPropagation();
+			});
+		});
+	</script>
+</body>
+</html>
