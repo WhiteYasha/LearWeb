@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Examples</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link href="" rel="stylesheet">
+	<style type="text/css">
+		body {
+			background: #d0cbd5;
+		}
+		header {
+			height: 150px;
+			display: flex;
+			background: #543a4e;
+			margin: 0 0 0.5em 0;
+		}
+		img.logo {
+			flex: 2;
+			box-sizing: border-box;
+			margin: 2em;
+			border: 1px solid #d0cbd5;
+		}
+		.sep {
+			flex: 3;
+		}
+		.topic {
+			flex: 1;
+			padding: 0.2em 0;
+			text-align: center;
+			align-self: flex-end;
+			background: #a49aab;
+			color: #fff;
+		}
+		.main {
+			display: flex;
+		}
+		.menu {
+			margin: 0 0.5em 0 0;
+			flex: 1;
+			height: 600px;
+			background: #a14f64;
+			color: #fff;
+		}
+		.section {
+			padding: 0.5em 1em;
+		}
+		.active {
+			border-right: 10px solid #bc96a4;
+			background: #c3b6c7;
+			color: #543a4e;
+		}
+		.content {
+			flex: 4;
+			display: flex;
+			flex-direction: column;
+		}
+		.content img {
+			flex: 1;
+		}
+		.text {
+			flex: 1;
+		}
+		/*Log in*/
+		.login {
+			box-sizing: border-box;
+			display: flex;
+			width: 600px;
+			height: 300px;
+			margin: 100px 0 0 calc((100% - 600px) / 2);
+			background: #543a4e;
+		}
+		img.photo {
+			flex: 1;
+			background: #fff;
+		}
+		div.info {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+		}
+		header.title {
+			flex: 1;
+			padding: 0 0 0 40%;
+			background: #a14f64;
+			color: #fff;
+		}
+		div.forms {
+			flex: 3;
+			text-align: center;
+			padding: 1.5em 0 0 0;
+		}
+		div.forms input,
+		div.forms .button {
+			display: block;
+			width: 80%;
+			box-sizing: border-box;
+			margin: 1em auto;
+		}
+		div.forms input {
+			line-height: 3;
+			padding: 0 0 0 1em;
+		}
+		div.forms .button {
+			line-height: 2;
+			background: #a14f64;
+			color: #fff;
+			cursor: pointer;
+		}
+		div.more {
+			flex: 1;
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+		}
+		div.more a {
+			text-decoration: none;
+			font-size: 11pt;
+			color: #fff;
+			padding: 0.3em 0.5em;
+		}
+	</style>
+</head>
+<body>
+	<div id="root">
+		<header>
+			<img src="" alt="" class="logo">
+			<div class="sep"></div>
+			<div class="topic">Topic 1</div>
+			<div class="topic">Topic 2</div>
+			<div class="topic">Topic 3</div>
+			<div class="topic">Topic 4</div>
+		</header>
+		<div class="main">
+			<div class="menu">
+				<div class="section active">Section 1</div>
+				<div class="section">Section 2</div>
+				<div class="section">Section 3</div>
+				<div class="section">Section 4</div>
+				<div class="section">Section 5</div>
+				<div class="section">Section 6</div>
+			</div>
+			<div class="content">
+				<img src="" alt="">
+				<article class="text">
+					Born thuggin',heartless and mean,muggin' at 16.On the scene watching fiends,buggin'.Kicking up dust with the older G's.Soaking up the game that was told to me.I ain't never touched a gat that I couldn't shoot,I learned not to trust a bitch from a prostitute.Was taught lessons,a young nigga asking questions.While other suckas was guessing,I was gangsta sexing.Elementary wasn't meant for me,can't regret it.I'm headed for the penitentiary,I'm cut classes,I'm ****in blastin', straight mashin',Mobbing through the overpass laughing.While these other mother****ers try to figure out.No doubt they jealous of a nigga's clout.Tell me Lord can ya feel me,I keep my finger on the trigger, cause some niggas tried to kill me.I live the life of a thug, hope you understand.Forgive me for my mistakes, I gotta play my hand.And my hand's on a 16 shot semi-automatic.Crooked cop killin' glock,I'm on my knees, beggin' please, come and save me.The whole world done made a nigga craazy.God, come saved the youth.Ain't nothing else to do but have faith in you.
+				</article>
+			</div>
+		</div>
+	</div>
+	<div id="root">
+		<div class="login">
+			<img src="" alt="" class="photo">
+			<div class="info">
+				<header class="title">
+					<h4>TITLE</h1>
+				</header>
+				<div class="forms">
+					<input type="text" placeholder="please input username...">
+					<input type="password" placeholder="please input password...">
+					<div class="button">立即登录</div>
+				</div>
+				<div class="more">
+					<a href="">免费注册</a>
+					<a href="">忘记密码</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
